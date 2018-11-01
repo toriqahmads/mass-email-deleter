@@ -1,7 +1,7 @@
 <?php
 	require_once('vendor/autoload.php');
 
-	$hosts = array('yahoo' => '{imap.mail.yahoo.com:993/imap/ssl/novalidate-cert}', 'gmail' => 'imap.gmail.com:993/imap/ssl/novalidate-cert}', 'outlook' => '{outlook.office365.com:993/imap/ssl/novalidate-cert}', 'hotmail' => '{pop3.live.com:995/pop3/ssl/novalidate-cert}');
+	$hosts = array('yahoo' => '{imap.mail.yahoo.com:993/imap/ssl/novalidate-cert}', 'gmail' => '{imap.gmail.com:993/imap/ssl/novalidate-cert}', 'outlook' => '{outlook.office365.com:993/imap/ssl/novalidate-cert}', 'hotmail' => '{pop3.live.com:995/pop3/ssl/novalidate-cert}');
 
 	$hostoption = array();
 	$x = 1;
@@ -14,7 +14,7 @@
 	echo "Masukkan pilihan (Hanya angka) : ";
 	$selecthost = rtrim(fgets(STDIN))-1;
 	$config['host'] = $hosts[$hostoption[$selecthost]];
-	echo "Masukkan alamat email Anda (Yahoo) : ";
+	echo "Masukkan alamat email Anda : ";
 	$config['email'] = rtrim(fgets(STDIN));
 	echo "Masukkan password email Anda : ";
 	$config['password'] = rtrim(fgets(STDIN));
